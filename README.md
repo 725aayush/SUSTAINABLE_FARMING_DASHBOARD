@@ -43,8 +43,8 @@ The **Sustainable Farming AI Dashboard**:
 | Feature | Screenshot |
 |---------|------------|
 | Dashboard Home | ![Home Screenshot](assets/home.png) |
-| AI Recommendations | ![Recommendation Screenshot](assets/recommendations.png) |
-| Market Data & Charts | ![Market Screenshot](assets/market.png) |
+| AI Recommendations | ![Recommendation Screenshot](assets/ai_recommendation.png) |
+| Market Data & Charts | ![Market Screenshot](assets/recommendationspng.png) |
 
 ---
 
