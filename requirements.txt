@@ -1,0 +1,7 @@
+flask
+pandas
+pysqlite3
+requests
+ollama
+python-dotenv
+gunicorn

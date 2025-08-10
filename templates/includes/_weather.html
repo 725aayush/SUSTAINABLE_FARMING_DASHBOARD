@@ -1,0 +1,28 @@
+<div class="card mt-3">
+    <div class="card-header bg-info text-white">
+        <h5>Weather Information</h5>
+    </div>
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 id="weatherTemp">{{ weather.temp }}°C</h2>
+            <div id="weatherIcon">
+                {% if weather.condition.lower() in ['sunny', 'clear'] %}
+                <i class="fas fa-sun fa-3x text-warning"></i>
+                {% elif weather.condition.lower() in ['rain', 'rainy'] %}
+                <i class="fas fa-cloud-rain fa-3x text-primary"></i>
+                {% else %}
+                <i class="fas fa-cloud fa-3x text-secondary"></i>
+                {% endif %}
+            </div>
+        </div>
+        <p class="lead" id="weatherCondition">{{ weather.condition }}</p>
+        <div class="row">
+            <div class="col">
+                <p><i class="fas fa-tint me-2"></i> <span id="weatherHumidity">{{ weather.humidity }}%</span> Humidity</p>
+            </div>
+            <div class="col">
+                <p><i class="fas fa-wind me-2"></i> <span id="weatherWind">{{ weather.wind }} km/h</span> Wind</p>
+            </div>
+        </div>
+    </div>
+</div>

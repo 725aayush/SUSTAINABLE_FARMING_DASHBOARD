@@ -1,0 +1,44 @@
+<div class="card h-100">
+    <div class="card-header bg-warning text-dark">
+        <h5>Market Research Data</h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Crop</th>
+                        <th>Price (₹/ton)</th>
+                        <th>Demand</th>
+                    </tr>
+                </thead>
+                <tbody id="marketTable">
+                    {% for item in market_data %}
+                    <tr>
+                        <td>{{ item.product }}</td>
+                        <td>₹{{ item.price }}</td>
+                        <td>
+                            {% if item.demand == 'High' %}
+                                <span class="badge bg-danger">High</span>
+                            {% elif item.demand == 'Medium' %}
+                                <span class="badge bg-warning text-dark">Medium</span>
+                            {% else %}
+                                <span class="badge bg-secondary">Low</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-4" id="marketChart">
+            {% if chart_image %}
+            <img src="data:image/png;base64,{{ chart_image }}" 
+                 class="img-fluid" alt="Profitability Chart">
+            {% else %}
+            <p class="text-muted">No chart available</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
